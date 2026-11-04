@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rumbo Viajero - Agencia de Viajes Online</title>
+    <!-- FontAwesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Encabezado / Navegación -->
+    <header class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-plane-departure"></i>
+            <span>Rumbo Viajero</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#buscador"><i class="fa-solid fa-magnifying-glass"></i> Buscar</a></li>
+                <li><a href="#paquetes"><i class="fa-solid fa-suitcase"></i> Paquetes</a></li>
+                <li><a href="#nosotros"><i class="fa-solid fa-users"></i> Nosotros</a></li>
+                <li><a href="#contacto"><i class="fa-solid fa-envelope"></i> Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero / Buscador Estilo Despegar -->
+    <section class="hero-search" id="buscador">
+        <div class="hero-overlay">
+            <h1>Encontrá tu próximo destino ideal</h1>
+            <p>Las mejores experiencias a Catamarca, Salta, Japón y Tailandia</p>
+
+            <div class="search-box">
+                <div class="search-tabs">
+                    <button class="active"><i class="fa-solid fa-suitcase"></i> Paquetes</button>
+                    <button><i class="fa-solid fa-plane"></i> Vuelos</button>
+                    <button><i class="fa-solid fa-hotel"></i> Alojamiento</button>
+                </div>
+                <div class="search-form">
+                    <div class="input-group">
+                        <label><i class="fa-solid fa-location-dot"></i> Origen</label>
+                        <input type="text" value="Buenos Aires (BUE)" readonly>
+                    </div>
+                    <div class="input-group">
+                        <label><i class="fa-solid fa-map-pin"></i> Destino</label>
+                        <select id="destino-select">
+                            <option value="">¿A dónde querés ir?</option>
+                            <option value="catamarca">Catamarca, Argentina</option>
+                            <option value="salta">Salta, Argentina</option>
+                            <option value="japon">Tokio / Kioto, Japón</option>
+                            <option value="tailandia">Bangkok / Chiang Mai, Tailandia</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label><i class="fa-solid fa-calendar-days"></i> Salida</label>
+                        <input type="date">
+                    </div>
+                    <div class="input-group">
+                        <label><i class="fa-solid fa-user"></i> Pasajeros</label>
+                        <input type="text" value="1 Pasajero" readonly>
+                    </div>
+                    <button class="btn-search"><i class="fa-solid fa-magnifying-glass"></i> Buscar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Paquetes Destacados -->
+    <section class="container" id="paquetes">
+        <h2 class="section-title">Paquetes Turísticos Destacados</h2>
+        <div class="cards-grid">
+
+            <!-- Catamarca -->
+            <div class="card">
+                <div class="card-badge">Aventura / Naturaleza</div>
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Catamarca">
+                <div class="card-body">
+                    <h3>Catamarca: Huellas del Tiempo</h3>
+                    <p class="duration"><i class="fa-regular fa-clock"></i> 5 días / 4 noches</p>
+                    <p class="desc">Cuesta del Portezuelo, Fiambalá, Termas y Sandboard en las Dunas de Tatón.</p>
+                    <div class="includes">
+                        <span><i class="fa-solid fa-hotel"></i> Alojamiento</span>
+                        <span><i class="fa-solid fa-utensils"></i> Desayunos</span>
+                        <span><i class="fa-solid fa-bus"></i> Traslados</span>
+                        <span><i class="fa-solid fa-shield-halved"></i> Asistencia</span>
+                    </div>
+                    <div class="price-container">
+                        <span class="price-label">Precio por persona desde</span>
+                        <span class="price">$450.000 ARS</span>
+                    </div>
+                    <a href="https://www.capcut.com/sv2/ZS9y5rR7ejcWs-XewwU" target="_blank" class="btn-card">Ver Video Promocional</a>
+                </div>
+            </div>
+
+            <!-- Salta -->
+            <div class="card">
+                <div class="card-badge">Cultura / Gastronomía</div>
+                <img src="https://images.unsplash.com/photo-1589802829985-817e51171b92?auto=format&fit=crop&w=600&q=80" alt="Salta">
+                <div class="card-body">
+                    <h3>Salta en los Sentidos</h3>
+                    <p class="duration"><i class="fa-regular fa-clock"></i> 4 días / 3 noches</p>
+                    <p class="desc">Centro Histórico, Quebrada de San Lorenzo y Quebrada del Toro con degustación regional.</p>
+                    <div class="includes">
+                        <span><i class="fa-solid fa-hotel"></i> Alojamiento</span>
+                        <span><i class="fa-solid fa-utensils"></i> Degustación</span>
+                        <span><i class="fa-solid fa-bus"></i> Excursiones</span>
+                        <span><i class="fa-solid fa-shield-halved"></i> Asistencia</span>
+                    </div>
+                    <div class="price-container">
+                        <span class="price-label">Precio por persona desde</span>
+                        <span class="price">$420.000 ARS</span>
+                    </div>
+                    <a href="https://www.capcut.com/tv2/ZSgtwMwk4/" target="_blank" class="btn-card">Ver Video Promocional</a>
+                </div>
+            </div>
+
+            <!-- Japón -->
+            <div class="card">
+                <div class="card-badge badge-int">Internacional / Anime</div>
+                <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=600&q=80" alt="Japón">
+                <div class="card-body">
+                    <h3>Anime World Japan</h3>
+                    <p class="duration"><i class="fa-regular fa-clock"></i> 8 días / 7 noches</p>
+                    <p class="desc">Tokio, Akihabara, Harajuku, Kioto, experiencia temáticas de anime, manga y cultura otaku.</p>
+                    <div class="includes">
+                        <span><i class="fa-solid fa-hotel"></i> 7 Noches</span>
+                        <span><i class="fa-solid fa-train"></i> Tokio ↔ Kioto</span>
+                        <span><i class="fa-solid fa-map-location-dot"></i> Guía</span>
+                        <span><i class="fa-solid fa-shield-halved"></i> Seguro</span>
+                    </div>
+                    <div class="price-container">
+                        <span class="price-label">Precio por persona desde</span>
+                        <span class="price">USD 2.800</span>
+                    </div>
+                    <a href="https://photos.app.goo.gl/FdMQgaBuWV71nLbJA" target="_blank" class="btn-card">Ver Video Promocional</a>
+                </div>
+            </div>
+
+            <!-- Tailandia -->
+            <div class="card">
+                <div class="card-badge badge-int">Internacional / Gourmet</div>
+                <img src="https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=600&q=80" alt="Tailandia">
+                <div class="card-body">
+                    <h3>Sabores de Tailandia</h3>
+                    <p class="duration"><i class="fa-regular fa-clock"></i> 8 días / 7 noches</p>
+                    <p class="desc">Bangkok y Chiang Mai. Templos, mercados locales, clases de cocina y cena de despedida.</p>
+                    <div class="includes">
+                        <span><i class="fa-solid fa-hotel"></i> 7 Noches</span>
+                        <span><i class="fa-solid fa-utensils"></i> Clases Cocina</span>
+                        <span><i class="fa-solid fa-plane-suburb"></i> Traslados</span>
+                        <span><i class="fa-solid fa-shield-halved"></i> Seguro</span>
+                    </div>
+                    <div class="price-container">
+                        <span class="price-label">Precio por persona desde</span>
+                        <span class="price">USD 2.400</span>
+                    </div>
+                    <a href="https://photos.app.goo.gl/kdm8YfweK34dFNhBA" target="_blank" class="btn-card">Ver Video Promocional</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Información de la Empresa -->
+    <section class="about-section" id="nosotros">
+        <div class="container">
+            <h2 class="section-title">Sobre Rumbo Viajero</h2>
+            <p class="lead-text">
+                Somos una Agencia de Viajes Online (OTA) enfocada en el turismo digital, sustentable y accesible. Transformamos el acceso a los viajes simplificando la conexión entre nuestros clientes y los mejores prestadores turísticos.
+            </p>
+
+            <div class="info-grid">
+                <div class="info-box">
+                    <i class="fa-solid fa-eye"></i>
+                    <h3>Nuestra Visión</h3>
+                    <p>Ser la plataforma digital líder de la región, reconocida por simplificar la vida de nuestros usuarios mediante tecnología innovadora, procesos eficientes y experiencias rápidas.</p>
+                </div>
+                <div class="info-box">
+                    <i class="fa-solid fa-bullseye"></i>
+                    <h3>Nuestra Misión</h3>
+                    <p>Transformar el acceso a los viajes simplificando la conexión entre clientes y prestadores, ofreciendo soluciones mediante tecnología rápida, accesible e innovadora.</p>
+                </div>
+                <div class="info-box">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <h3>Proyecto Institucional 2026</h3>
+                    <p><strong>E.E.S.T. N°5 - Reino de España</strong><br>
+                    Tecnicatura en Servicios Turísticos (6°5°)<br>
+                    <strong>Integrantes:</strong> Jurado Florencia y Larrachado Valentina</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página / Contacto -->
+    <footer id="contacto">
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h3>Rumbo Viajero</h3>
+                <p>Turismo Corporativo S.R.L</p>
+                <p><strong>CUIT:</strong> 49-60881209-7</p>
+                <p><strong>Legajo:</strong> 12463</p>
+                <p>Local Virtual Habilitado (.tur.ar)</p>
+            </div>
+            <div class="footer-col">
+                <h3>Contacto</h3>
+                <p><i class="fa-solid fa-location-dot"></i> Garibaldi 433, Quilmes (CP 1860), Bs.As.</p>
+                <p><i class="fa-solid fa-phone"></i> (11) 7959-4193</p>
+                <p><i class="fa-solid fa-envelope"></i> Rumbo.viajero@gmail.com</p>
+            </div>
+            <div class="footer-col">
+                <h3>Acceso Oficial</h3>
+                <p>Dominio web registrado:</p>
+                <a href="https://rumboviajero.tur.ar" target="_blank" class="domain-link">rumboviajero.tur.ar</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Rumbo Viajero - Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+                  </html>
+                  
